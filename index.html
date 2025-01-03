@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator App</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="icon" href="./assets/images/favicon-32x32.png">
+</head>
+<body>
+    <div class="root">
+        <div class="card">
+            <div class="top-bar">
+                <label for="day"><p class="inputP">DAY</p>
+                    <input autofocus="true" onclick="removeError()" type="text" name="day" id="day" placeholder="DD">
+                    <i><p class="error hidden mainError">This field is required</p></i>
+                </label>
+                <label for="month"><p class="inputP">MONTH</p>
+                    <input onclick="removeError()" type="text" name="month" id="month" placeholder="MM">
+                    <i><p class="error hidden">This field is required</p></i>
+                </label>
+                <label for="year"><p class="inputP">YEAR</p>
+                    <input onclick="removeError()" type="text" name="year" id="year" placeholder="YYYY">
+                    <i><p class="error hidden">This field is required</p></i>
+                </label>
+            </div>
+            <div class="arrow-block">
+                <div class="hr"></div>
+                <img onclick="calculate()" src="./assets/images/icon-arrow.png" alt="arrow-icon" class="arrow" id="arrow">
+            </div>
+            <div class='bottom-bar'>
+                <div class='years'>
+                  <p><i id="yearsOutput"><span id="yearSpan">--</span> years</i></p>
+                </div>
+                <div class='months'>
+                  <p><i id="monthsOutput"><span id="monthSpan">--</span> months</i></p>
+                </div>
+                <div class='days'>
+                  <p><i id="daysOutput"><span id="daySpan">--</span> days</i></p>
+                </div>
+        </div>
+    </div>
+
+    <script defer type="text/javascript" src="./index.js"></script>
+</body>
+</html>
